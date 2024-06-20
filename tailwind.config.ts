@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        formimage:
+          "url('https://s3-alpha-sig.figma.com/img/f9a3/52ae/9cca01dcc236aeaaae9f4f148230e0c9?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jWrPCHBCQerinpB6pxf6KK9pm0BVV5EFhudMKIqrTvUjAq3OoYALc4~KfRoExiBB~1uONcToivmQ63ODUor7ehFWhAjEOLFzTjYWqCJrZI8tgOCWu6zEPJVa5ugr7NQpFcLlnhTo6BjFLTRbz1zO~tR~Vj2dEn~3b6R915RramOFcC1t8rxXemMNXpJFxS2VoFtFQqRaCwYVzKIUAwCPaE~Wf3R5EmFQ~KBvMGNueyLKBbCQDigzkQ9oXxLv-FYYQnbapAeC59fq9EB0ZAriAtfgfqNC77ltLYoPTmtHyWtc~2u4e41pkmerEsicuWzJki-wdyGdBxHcxyuGcmxM-w__')",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
