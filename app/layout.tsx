@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import React from "react";
+import TankQuerySetup from "@/components/tank-querysetup";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -24,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}{" "}
+          <TankQuerySetup>{children}</TankQuerySetup>
         </ThemeProvider>
       </body>
     </html>
