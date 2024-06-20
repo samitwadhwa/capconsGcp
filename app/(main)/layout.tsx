@@ -1,3 +1,5 @@
+import Footer from "@/components/common/footer";
+import Header from "@/components/common/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +16,9 @@ export default function MainLayout({
   return (
     <>
       <div className="min-h-screen flex flex-col">
+        <Header />
         <main className="flex-grow p-4">{children}</main>
+        <Footer />
       </div>
     </>
   );
