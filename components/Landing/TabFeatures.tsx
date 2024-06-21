@@ -19,19 +19,19 @@ const TabFeatures = () => {
         <TabsList className="flex gap-x-1 w-full rounded-md border-none py-2 pl-3 pr-10 sm:text-sm bg-transparent justify-start">
           <TabsTrigger
             value="create"
-            className="transition-all text-xl outline-none border-b border-transparent font-bold hover:border-b hover:border-primary text-foreground font-lg"
+            className="transition-all text-xl outline-none border-b border-transparent font-bold hover:border-b hover:border-primary text-foreground font-lg data-[state=active]:border-[#D6A7FF] data-[state=active]:text-[#D6A7FF]"
           >
             Create
           </TabsTrigger>
           <TabsTrigger
             value="engage"
-            className="transition-all text-xl outline-none border-b border-transparent font-bold hover:border-b hover:border-primary text-foreground font-lg"
+            className="transition-all text-xl outline-none border-b border-transparent font-bold hover:border-b hover:border-primary text-foreground font-lg data-[state=active]:border-[#D6A7FF] data-[state=active]:text-[#D6A7FF]"
           >
             Engage
           </TabsTrigger>
           <TabsTrigger
             value="monetize"
-            className="transition-all text-xl outline-none font-bold hover:border-b hover:border-primary text-foreground font-lg"
+            className="transition-all text-xl outline-none font-bold hover:border-b hover:border-primary text-foreground font-lg data-[state=active]:border-[#D6A7FF] data-[state=active]:text-[#D6A7FF]"
           >
             Monetize
           </TabsTrigger>

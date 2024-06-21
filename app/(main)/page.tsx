@@ -103,7 +103,7 @@ function Main() {
         </section>
 
         {/** Contact Features */}
-        <section className="min-h-screen">
+        <section className="h-[70vh]">
           <ContactForm />
         </section>
       </main>

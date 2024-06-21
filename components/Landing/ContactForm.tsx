@@ -20,7 +20,7 @@ const ContactForm = () => {
         <div className="border-4 border-black border-r-transparent border-b-transparent"></div>
       </div>
 
-      <div className="bg-black/60 flex flex-col items-center justify-center">
+      <div className="bg-black/60 flex flex-col items-center">
         <div>
           {" "}
           <div className="sm:mx-auto space-y-4 sm:w-full sm:max-w-sm">
