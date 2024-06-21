@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 const ContactForm = () => {
   return (
-    <div className="my-10 bg-formimage grid transition-all xl:grid-cols-3 bg-cover bg-no-repeat  h-[100vh]">
+    <div className="bg-formimage grid transition-all xl:grid-cols-3 bg-cover bg-no-repeat  h-[100vh]">
       <div className="lg:col-span-2 hidden xl:grid transition-all grid-cols-3 ">
         <div className="border-4 border-black border-t-transparent border-l-transparent"></div>
         <div className="border-4 border-black border-t-transparent"></div>
@@ -20,7 +20,7 @@ const ContactForm = () => {
         <div className="border-4 border-black border-r-transparent border-b-transparent"></div>
       </div>
 
-      <div className="bg-black/60 flex flex-col justify-center items-center px-8 md:px-32">
+      <div className="bg-black/60 flex flex-col items-center justify-center">
         <div>
           {" "}
           <div className="sm:mx-auto space-y-4 sm:w-full sm:max-w-sm">
@@ -75,7 +75,7 @@ const ContactForm = () => {
               <div>
                 <Button
                   type="submit"
-                  className="flex w-[200px] mx-auto  justify-center rounded-md  px-3 py-2 text-sm font-semibold leading-6 text-foreground shadow-sm"
+                  className="flex w-[200px] mx-auto  justify-center  px-3 py-2 text-sm font-semibold leading-6 text-foreground shadow-sm"
                 >
                   Get Started
                 </Button>
