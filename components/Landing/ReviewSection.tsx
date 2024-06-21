@@ -6,25 +6,21 @@ import ReviewCard from "./ReviewCard";
 type Props = {};
 
 const ReviewSection = (props: Props) => {
-  // Start with a default window width value (e.g., 0 or a typical mobile width)
-  const [windowWidth, setWindowWidth] = useState<number>(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
-  // useEffect to handle window resize events
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    // Initialize the window width on mount
-    setWindowWidth(window.innerWidth);
-
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const isMobile = windowWidth <= 400;
 
   return (
     <div className="px-8 p-4 my-8">

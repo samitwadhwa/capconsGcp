@@ -5,10 +5,7 @@ import "react-device-frameset/styles/marvel-devices.min.css";
 import "react-device-frameset/styles/device-selector.min.css";
 
 const MobilePhone = () => {
-  // Start with a default window width value (e.g., 0 or a typical mobile width)
-  const [windowWidth, setWindowWidth] = useState<number>(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   // useEffect to handle window resize events
   useEffect(() => {
