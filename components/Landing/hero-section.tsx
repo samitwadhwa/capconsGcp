@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-[url(/images/Landing.png)] bg-cover bg-center bg-no-repeat">
+    <section className="relative w-full bg-[url(/images/Landing.png)] bg-cover bg-center bg-no-repeat">
       <div className="relative border mx-auto max-w-screen-3xl px-4 py-32 sm:px-6 lg:flex lg:h-[90vh] lg:items-center lg:px-8">
         <div className="max-w-xl text-center sm:text-left">
           <h1 className="text-4xl font-extrabold sm:text-5xl">

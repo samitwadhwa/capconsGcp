@@ -22,7 +22,7 @@ const MobilePhone = () => {
   };
 
   return (
-    <section className="min-h-screen mt-20">
+    <section className="min-h-screen w-full mt-20">
       <div className="h-[100vh] bg-[#2C2338] py-24 flex justify-center items-center my-10">
         <div className="container flex flex-col justify-center items-center">
           <DeviceFrameset

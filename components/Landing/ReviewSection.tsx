@@ -7,8 +7,6 @@ import useWindowWidth from "@/hooks/useWindowWidth";
 const ReviewSection = () => {
   const windowWidth = useWindowWidth();
 
-  const isMobile = windowWidth <= 400;
-
   return (
     <div className="px-8 p-4 my-8">
       <div className="text-foreground text-2xl font-bold">Reviews</div>

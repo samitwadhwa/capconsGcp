@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 const ContactForm = () => {
   return (
-    <div className="bg-formimage grid transition-all xl:grid-cols-3 bg-cover bg-no-repeat  h-[100vh]">
+    <div className="bg-formimage grid transition-all xl:grid-cols-3  bg-cover bg-no-repeat h-full">
       <div className="lg:col-span-2 hidden xl:grid transition-all grid-cols-3 ">
         <div className="border-4 border-black border-t-transparent border-l-transparent"></div>
         <div className="border-4 border-black border-t-transparent"></div>
@@ -20,7 +20,7 @@ const ContactForm = () => {
         <div className="border-4 border-black border-r-transparent border-b-transparent"></div>
       </div>
 
-      <div className="bg-black/60 flex flex-col items-center">
+      <div className="bg-black/60 px-4 md:px-auto flex flex-col items-center">
         <div className="mt-4">
           {" "}
           <div className="sm:mx-auto space-y-4 sm:w-full sm:max-w-sm">
@@ -28,8 +28,9 @@ const ContactForm = () => {
               Join with an invitation!
             </h2>
             <div className="text-sm lg:font-medium p-2 text-foreground text-justify">
-              If you don&apos;t yet have an invite, provide us your another social
-              media, then get started and we will send you an invitation mail.
+              If you don&apos;t yet have an invite, provide us your another
+              social media, then get started and we will send you an invitation
+              mail.
             </div>
           </div>
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
