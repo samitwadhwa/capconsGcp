@@ -847,6 +847,10 @@ body{
   margin-top: 2rem;
 }
 
+.mt-16{
+  margin-top: 4rem;
+}
+
 .line-clamp-2{
   overflow: hidden;
   display: -webkit-box;
@@ -880,6 +884,15 @@ body{
 
 .aspect-square{
   aspect-ratio: 1 / 1;
+}
+
+.aspect-\[3\/2\]{
+  aspect-ratio: 3/2;
+}
+
+.size-4{
+  width: 1rem;
+  height: 1rem;
 }
 
 .h-1{
@@ -968,6 +981,30 @@ body{
 
 .h-20{
   height: 5rem;
+}
+
+.h-\[\]{
+  height: ;
+}
+
+.h-\[70\]{
+  height: 70;
+}
+
+.h-\[0vh\]{
+  height: 0vh;
+}
+
+.h-\[50vh\]{
+  height: 50vh;
+}
+
+.h-\[60vh\]{
+  height: 60vh;
+}
+
+.h-28{
+  height: 7rem;
 }
 
 .max-h-\[100vh\]{
@@ -1077,6 +1114,10 @@ body{
 
 .w-0{
   width: 0px;
+}
+
+.w-28{
+  width: 7rem;
 }
 
 .min-w-\[12rem\]{
@@ -1638,6 +1679,10 @@ body{
   padding: 1.5rem;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1726,6 +1771,11 @@ body{
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pb-10{
@@ -2006,6 +2056,11 @@ body{
 
 .blur-\[5px\]{
   --tw-blur: blur(5px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.invert{
+  --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2662,6 +2717,10 @@ body{
     display: flex;
   }
 
+  .sm\:hidden{
+    display: none;
+  }
+
   .sm\:w-full{
     width: 100%;
   }
@@ -2705,6 +2764,11 @@ body{
   .sm\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:px-2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .sm\:pb-32{
@@ -2818,6 +2882,10 @@ body{
 
   .lg\:pt-8{
     padding-top: 2rem;
+  }
+
+  .lg\:font-medium{
+    font-weight: 500;
   }
 }
 

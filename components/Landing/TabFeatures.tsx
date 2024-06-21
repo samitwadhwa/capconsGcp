@@ -5,7 +5,7 @@ import Cards from "../common/LandingCards";
 
 const TabFeatures = () => {
   return (
-    <div className="px-8">
+    <div className="lg:px-8">
       <div className="px-2">
         <div className="text-2xl font-bold text-foreground">
           Tab into the features which let users come back

@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/popover";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { callsToAction, products } from "@/lib/models";
+import user from '@/public/images/accountUser.png'
 
 const Header = () => {
   return (
@@ -118,10 +119,8 @@ const Header = () => {
           </a>
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-100">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+        <div className="flex flex-1 justify-end">
+          <img src={user.src} className="h-10 w-10" alt="" />
         </div>
       </nav>
     </header>

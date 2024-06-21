@@ -21,21 +21,21 @@ const ContactForm = () => {
       </div>
 
       <div className="bg-black/60 flex flex-col items-center">
-        <div>
+        <div className="mt-4">
           {" "}
           <div className="sm:mx-auto space-y-4 sm:w-full sm:max-w-sm">
-            <h2 className="mt-10 text-center text-4xl whitespace-nowrap font-bold leading-9 tracking-tight text-foreground">
+            <h2 className="mt-10 text-center text-3xl whitespace-nowrap font-bold leading-9 tracking-tight text-foreground">
               Join with an invitation!
             </h2>
-            <div className="text-sm font-medium text-foreground text-justify">
+            <div className="text-sm lg:font-medium p-2 text-foreground text-justify">
               If you don&apos;t yet have an invite, provide us your another social
               media, then get started and we will send you an invitation mail.
             </div>
           </div>
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-2" action="#" method="POST">
               <div>
-                <div className="mt-2">
+                <div className="mt-2 p-2">
                   <Input
                     name="name"
                     type="text"
@@ -47,7 +47,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <div className="mt-2">
+                <div className="mt-2 p-2">
                   <Input
                     name="username"
                     type="text"
@@ -59,7 +59,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <div className="mt-2">
+                <div className="mt-2 p-2">
                   <Input
                     id="email"
                     name="email"
