@@ -7,9 +7,11 @@ import "react-device-frameset/styles/marvel-devices.min.css";
 import "react-device-frameset/styles/device-selector.min.css";
 import TabFeatures from "@/components/Landing/TabFeatures";
 import ReviewSection from "@/components/Landing/ReviewSection";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import ContactForm from "@/components/Landing/ContactForm";
 import Cards from "@/components/common/LandingCards";
+import woodlandLogo from '@/public/images/woodlandLogo.png'
+import woodlandLogo2 from '@/public/images/WoodsShield2.png'
+import woodlandLogo3 from '@/public/images/WoodsShield.png'
 
 function Main() {
   return (
@@ -43,9 +45,16 @@ function Main() {
           </div>
         </div>
 
+        {/* Companies display */}
+        <div className="flex justify-evenly p-4 items-center border mt-10">
+          <img className="w-30 h-20" src={woodlandLogo.src} alt="comapny logo" />
+          <img className="w-30 h-20" src={woodlandLogo2.src} alt="company logo" />
+          <img className="w-20 h-20" src={woodlandLogo3.src} alt="company logo" />
+        </div>
+
         {/** Features */}
-        <div className="container mx-auto mt-10">
-          <h3 className="text-3xl text-left text-white">Features</h3>
+        <div className="mx-auto mt-10">
+          <h3 className="text-3xl text-left pl-4 text-white">Features</h3>
           <div className="w-full flex flex-col justify-center items-center h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-[1100px] gap-4 p-3">
               {FeaturedCardData.map((item, index) => {
