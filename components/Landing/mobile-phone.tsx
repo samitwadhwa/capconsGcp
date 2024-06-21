@@ -1,26 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { DeviceFrameset } from "react-device-frameset";
 import "react-device-frameset/styles/marvel-devices.min.css";
 import "react-device-frameset/styles/device-selector.min.css";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 const MobilePhone = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-
-  // useEffect to handle window resize events
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Initialize the window width on mount
-    setWindowWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const windowWidth = useWindowWidth();
 
   // Determine the appropriate zoom level based on the window width
   const getZoomLevel = () => {

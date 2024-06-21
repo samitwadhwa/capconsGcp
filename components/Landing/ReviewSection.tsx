@@ -2,23 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
-type Props = {};
-
-const ReviewSection = (props: Props) => {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+const ReviewSection = () => {
+  const windowWidth = useWindowWidth();
 
   const isMobile = windowWidth <= 400;
 
