@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/popover";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { callsToAction, products } from "@/lib/models";
-import user from '@/public/images/accountUser.png'
+import user from "@/public/images/accountUser.png";
 
 const Header = () => {
   return (
@@ -32,25 +32,25 @@ const Header = () => {
         <div className="lg:flex space-x-12 hidden ">
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-foreground"
+            className=" text-base font-semibold leading-6 text-foreground"
           >
             Brands
           </a>
 
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-foreground"
+            className="text-base font-semibold leading-6 text-foreground"
           >
             Creator
           </a>
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-foreground"
+            className="text-base font-semibold leading-6 text-foreground"
           >
             Pricing
           </a>
           <Popover>
-            <PopoverTrigger className="flex text-foreground items-center gap-1 justify-center">
+            <PopoverTrigger className="flex text-base text-foreground items-center gap-1 justify-center">
               Resources
               <MdKeyboardArrowDown
                 className="h-5 w-5 flex-none text-muted-foreground"
@@ -76,7 +76,7 @@ const Header = () => {
                     </div>
                     <a
                       href={item.href}
-                      className="mt-6 block font-semibold text-foreground group-hover:text-accent-foreground"
+                      className="mt-6 text-base block font-semibold text-foreground group-hover:text-accent-foreground"
                     >
                       {item.name}
                       <span className="absolute inset-0" />
@@ -113,7 +113,7 @@ const Header = () => {
           </Popover>
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-foreground"
+            className="text-base font-semibold leading-6 text-foreground"
           >
             About Us
           </a>

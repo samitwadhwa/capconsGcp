@@ -1,26 +1,30 @@
-"use client"
+"use client";
 
-import React , { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
 
 type Props = {};
 
 const ReviewSection = (props: Props) => {
-    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  // Start with a default window width value (e.g., 0 or a typical mobile width)
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
-    useEffect(() => {
-        const handleResize = () => {
-          setWindowWidth(window.innerWidth);
-        };
-    
-        window.addEventListener('resize', handleResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
+  // useEffect to handle window resize events
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-      const isMobile = windowWidth <= 400;
+    // Initialize the window width on mount
+    setWindowWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="px-8 p-4 my-8">
@@ -98,4 +102,3 @@ const ReviewSection = (props: Props) => {
 };
 
 export default ReviewSection;
-
