@@ -1,5 +1,6 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/header";
+import MobileHeader from "@/components/common/Mobile-header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function MainLayout({
   return (
     <>
       <Header />
+      <MobileHeader />
       <main>{children}</main>
       <Footer />
     </>

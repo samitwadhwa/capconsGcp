@@ -12,7 +12,7 @@ import user from "@/public/images/accountUser.png";
 
 const Header = () => {
   return (
-    <header className="relative dark bg-background isolate z-10 ">
+    <header className="relative hidden lg:block dark bg-background isolate z-10 ">
       <nav
         className="mx-auto flex max-w-9xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
