@@ -14,11 +14,10 @@ interface Navigation {
 const navigation: Navigation = {
   main: [
     { name: "About", href: "https://capcons.com/about" },
+    { name: "Blog", href: "https://capcons.com/blogs" },
     { name: "Press", href: "https://capcons.com/press" },
-    { name: "Jobs", href: "https://capcons.com/jobs" },
     { name: "Terms", href: "https://capcons.com/terms" },
     { name: "Privacy", href: "https://capcons.com/privacy" },
-    { name: "Community", href: "https://capcons.com/community-guidelines" },
   ],
   social: [
     {
@@ -78,7 +77,7 @@ const Footer: React.FC = () => {
     <footer className="bg-background">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-20 sm:pt-24 pb-10 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="flex justify-between -mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (

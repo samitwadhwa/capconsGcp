@@ -21,7 +21,7 @@ const FeaturesCard = (props: FeaturedCardProps) => {
       <div
         className={cn(
           props.reverse
-            ? "h-full w-full inset-0 absolute bg-primary-950  -z-[2]"
+            ? "h-full w-full inset-0 absolute bg-[#62447D80]  -z-[2]"
             : "h-full w-full inset-0 absolute bg-[#343439]/75  -z-[2]"
         )}
       ></div>

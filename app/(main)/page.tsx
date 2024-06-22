@@ -1,3 +1,4 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
 import FeaturesCard from "@/components/Landing/FeaturesCard";
 import { FeaturedCardData, cardsData } from "@/lib/data";
@@ -12,8 +13,24 @@ import woodlandLogo3 from "@/public/images/WoodsShield.png";
 import MobilePhone from "@/components/Landing/mobile-phone";
 import HeroSection from "@/components/Landing/hero-section";
 import Carousel from "@/components/Landing/Carousel/Carousel";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import useWindowWidth from "@/hooks/useWindowWidth";
+import dynamic from 'next/dynamic';
 
-function Main() {
+export function Main() {
+
+  const windowWidth = useWindowWidth();
+  // State to manage the visibility of extra cards
+  const [showAllCards, setShowAllCards] = useState(false);
+
+  // Toggle function to show/hide extra cards
+  const toggleCardVisibility = () => {
+    setShowAllCards(prevState => !prevState);
+  };
+
+  const visibleCards = showAllCards ? cardsData.length : 2;
+  
   return (
     <main className="flex flex-col relative py-screen items-center justify-between ">
       <HeroSection />
@@ -47,7 +64,7 @@ function Main() {
         <ReviewSection />
       </section>
 
-      <section className="min-h-screen w-full mt-20">
+      <section className="w-full mt-20 md:min-h-screen sm:min-h-0">
         <div className="lg:px-8 px-3">
           <div>
             <div className="text-2xl font-bold text-background-100">
@@ -57,27 +74,50 @@ function Main() {
               Everything You Need To Launch And Grow
             </div>
           </div>
-          <div className="grid mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
-            {cardsData.map((item, index) => {
-              return (
-                <Cards
-                  key={index}
-                  imageUrl={item.imageUrl}
-                  description={item.description}
-                  title={item.title}
-                  href={item.href}
-                />
-              );
-            })}
+          <div className="grid mt-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
+          {windowWidth <= 400 ? cardsData.slice(0, visibleCards).map((item, index) => {
+          return (
+            <Cards
+              key={index}
+              imageUrl={item.imageUrl}
+              description={item.description}
+              title={item.title}
+              href={item.href}
+            />
+          );
+        }) 
+      : 
+      cardsData.map((item, index) => {
+        return (
+          <Cards
+            key={index}
+            imageUrl={item.imageUrl}
+            description={item.description}
+            title={item.title}
+            href={item.href}
+          />
+        );
+      }) 
+      }
           </div>
+         {/* "View More" and "View Less" buttons visible only on smaller screens */}
+      {cardsData.length > 2 && (
+        <div className="mt-6 text-center">
+          <Button
+            className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"
+            onClick={toggleCardVisibility}
+          >
+            {showAllCards ? 'View Less' : 'View More'}
+          </Button>
+        </div>
+      )}
         </div>
       </section>
 
-      <section className="h-[70vh] w-full ">
+      <section className="h-[70vh] w-full mt-12 sm:mt-0">
         <ContactForm />
       </section>
     </main>
   );
 }
-
-export default Main;
+export default dynamic (() => Promise.resolve(Main),{ssr: false}); 

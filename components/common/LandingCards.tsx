@@ -8,7 +8,7 @@ interface CardProps {
 }
 export default function Card(post: CardProps) {
   return (
-    <article className="flex  bg-[#2C2338] p-5 border border-foreground-900 hover:bg-foreground-950/60 cursor-pointer transition-all rounded-xl flex-col  items-start justify-between">
+    <article className="flex  bg-[#2C2338] p-5 border border-foreground hover:bg-foreground-950/60 cursor-pointer transition-all rounded-xl flex-col items-start justify-between">
       <div className="relative w-full">
         <img
           src={post.imageUrl}

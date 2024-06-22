@@ -37,7 +37,7 @@ const TabFeatures = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="create" className="mt-6 px-4">
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-row-1 md:grid-cols-3">
             {cardsData.map((item, index) => (
               <Cards
                 key={index}
@@ -50,7 +50,7 @@ const TabFeatures = () => {
           </div>
         </TabsContent>
         <TabsContent value="engage" className="mt-4 px-4">
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-row-1 md:grid-cols-3">
             {cardsData.map((item, index) => (
               <Cards
                 key={index}

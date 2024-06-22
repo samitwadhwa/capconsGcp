@@ -21,7 +21,7 @@ const ContactForm = () => {
       </div>
 
       <div className="bg-black/60 px-4 md:px-auto flex flex-col items-center">
-        <div className="mt-4">
+        <div className="sm:mt-8">
           {" "}
           <div className="sm:mx-auto space-y-4 sm:w-full sm:max-w-sm">
             <h2 className="mt-10 text-center text-3xl whitespace-nowrap font-bold leading-9 tracking-tight text-foreground">

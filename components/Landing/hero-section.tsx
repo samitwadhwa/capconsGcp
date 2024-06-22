@@ -19,7 +19,7 @@ const HeroSection = () => {
 
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <Button size={"lg"} className="sm:w-[240px] w-full">
-              Get Startes
+              Get Started
             </Button>
           </div>
         </div>
