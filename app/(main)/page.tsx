@@ -60,7 +60,7 @@ const Main = () => {
         <ReviewSection />
       </section>
 
-      <section className="w-full mt-20 md:min-h-screen sm:min-h-0">
+      <section className="w-full lg:max-h-screen md:mb-10">
         <div className="lg:px-8 px-3">
           <div>
             <div className="text-2xl font-bold text-background-100">
@@ -70,7 +70,7 @@ const Main = () => {
               Everything You Need To Launch And Grow
             </div>
           </div>
-          <div className="grid mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
+          <div className="grid mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             {windowWidth <= 400
               ? cardsData.slice(0, visibleCards).map((item, index) => {
                   return (
