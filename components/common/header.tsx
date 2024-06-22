@@ -6,6 +6,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { callsToAction, products } from "@/lib/models";
 import user from "@/public/images/accountUser.png";
@@ -120,7 +122,10 @@ const Header = () => {
         </div>
 
         <div className="flex flex-1 justify-end">
-          <img src={user.src} className="h-10 w-10" alt="" />
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         </div>
       </nav>
     </header>
