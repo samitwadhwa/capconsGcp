@@ -1,4 +1,4 @@
-"use client"
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import FeaturesCard from "@/components/Landing/FeaturesCard";
 import { FeaturedCardData, cardsData } from "@/lib/data";
@@ -16,21 +16,20 @@ import Carousel from "@/components/Landing/Carousel/Carousel";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
-export function Main() {
-
+const Main = () => {
   const windowWidth = useWindowWidth();
   // State to manage the visibility of extra cards
   const [showAllCards, setShowAllCards] = useState(false);
 
   // Toggle function to show/hide extra cards
   const toggleCardVisibility = () => {
-    setShowAllCards(prevState => !prevState);
+    setShowAllCards((prevState) => !prevState);
   };
 
   const visibleCards = showAllCards ? cardsData.length : 2;
-  
+
   return (
     <main className="flex flex-col relative py-screen items-center justify-between ">
       <HeroSection />
@@ -75,42 +74,41 @@ export function Main() {
             </div>
           </div>
           <div className="grid mt-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
-          {windowWidth <= 400 ? cardsData.slice(0, visibleCards).map((item, index) => {
-          return (
-            <Cards
-              key={index}
-              imageUrl={item.imageUrl}
-              description={item.description}
-              title={item.title}
-              href={item.href}
-            />
-          );
-        }) 
-      : 
-      cardsData.map((item, index) => {
-        return (
-          <Cards
-            key={index}
-            imageUrl={item.imageUrl}
-            description={item.description}
-            title={item.title}
-            href={item.href}
-          />
-        );
-      }) 
-      }
+            {windowWidth <= 400
+              ? cardsData.slice(0, visibleCards).map((item, index) => {
+                  return (
+                    <Cards
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })
+              : cardsData.map((item, index) => {
+                  return (
+                    <Cards
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })}
           </div>
-         {/* "View More" and "View Less" buttons visible only on smaller screens */}
-      {cardsData.length > 2 && (
-        <div className="mt-6 text-center">
-          <Button
-            className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"
-            onClick={toggleCardVisibility}
-          >
-            {showAllCards ? 'View Less' : 'View More'}
-          </Button>
-        </div>
-      )}
+          {/* "View More" and "View Less" buttons visible only on smaller screens */}
+          {cardsData.length > 2 && (
+            <div className="mt-6 text-center">
+              <Button
+                className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"
+                onClick={toggleCardVisibility}
+              >
+                {showAllCards ? "View Less" : "View More"}
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -119,5 +117,5 @@ export function Main() {
       </section>
     </main>
   );
-}
-export default dynamic (() => Promise.resolve(Main),{ssr: false}); 
+};
+export default Main;
