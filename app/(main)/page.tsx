@@ -6,7 +6,6 @@ import { FeaturedCardData, cardsData } from "@/lib/data";
 import TabFeatures from "@/components/Landing/TabFeatures";
 import ReviewSection from "@/components/Landing/ReviewSection";
 import ContactForm from "@/components/Landing/ContactForm";
-import Cards from "@/components/common/LandingCards";
 import woodlandLogo from "@/public/images/woodlandLogo.png";
 import woodlandLogo2 from "@/public/images/WoodsShield2.png";
 import woodlandLogo3 from "@/public/images/WoodsShield.png";
@@ -16,14 +15,12 @@ import Carousel from "@/components/Landing/Carousel/Carousel";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import dynamic from "next/dynamic";
+import BlogCard from "@/components/Landing/BlogsCard";
 
 const Main = () => {
   const windowWidth = useWindowWidth();
-  // State to manage the visibility of extra cards
   const [showAllCards, setShowAllCards] = useState(false);
 
-  // Toggle function to show/hide extra cards
   const toggleCardVisibility = () => {
     setShowAllCards((prevState) => !prevState);
   };
@@ -45,7 +42,7 @@ const Main = () => {
       <div className="mx-auto mt-60">
         <h3 className="text-3xl text-left pl-4 text-white">Features</h3>
         <div className="w-full flex justify-center items-center h-full">
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 max-w-[1100px] gap-4 p-3">
+          <div className="flex overflow-x-auto overflow-y-hidden md:grid md:grid-cols-2 xl:grid-cols-3 max-w-[350px] md:max-w-[1100px] gap-4 p-3">
             {FeaturedCardData.map((item, index) => {
               return <FeaturesCard key={index} {...item} />;
             })}
@@ -77,7 +74,7 @@ const Main = () => {
             {windowWidth <= 400
               ? cardsData.slice(0, visibleCards).map((item, index) => {
                   return (
-                    <Cards
+                    <BlogCard
                       key={index}
                       imageUrl={item.imageUrl}
                       description={item.description}
@@ -88,7 +85,7 @@ const Main = () => {
                 })
               : cardsData.map((item, index) => {
                   return (
-                    <Cards
+                    <BlogCard
                       key={index}
                       imageUrl={item.imageUrl}
                       description={item.description}
@@ -99,7 +96,7 @@ const Main = () => {
                 })}
           </div>
           {/* "View More" and "View Less" buttons visible only on smaller screens */}
-          {cardsData.length > 2 && (
+          {cardsData.length > 2 && windowWidth <= 400 && (
             <div className="mt-6 text-center">
               <Button
                 className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"

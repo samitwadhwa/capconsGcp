@@ -6,9 +6,9 @@ interface CardProps {
   title: string;
   href: string;
 }
-export default function Card(post: CardProps) {
+export default function BlogCard(post: CardProps) {
   return (
-    <article className="flex  bg-[#2C2338] p-5 border border-foreground hover:bg-foreground-950/60 cursor-pointer transition-all rounded-xl flex-col items-start justify-between">
+    <article className="flex flex-col bg-[#2C2338] p-5 border border-foreground hover:bg-foreground-950/60 cursor-pointer transition-all rounded-xl items-start justify-between">
       <div className="relative w-full">
         <img
           src={post.imageUrl}
@@ -17,7 +17,7 @@ export default function Card(post: CardProps) {
         />
         <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
       </div>
-      <div className="max-w-xl h-full mt-8 flex flex-col justify-between">
+      <div className="max-w-xl h-full mt-8 flex flex-col justify-between ">
         <div className="group relative">
           <h3 className="mt-3 text-xl font-bold leading-6 text-foreground-100 ">
             {post.title}

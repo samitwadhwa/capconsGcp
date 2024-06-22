@@ -24,6 +24,10 @@ const config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      width: {
+        '18rem': '18rem',
+        '25rem': '25rem'
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

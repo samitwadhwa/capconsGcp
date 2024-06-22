@@ -1,12 +1,23 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"; // Adjust the import path to match your project structure
+import TabsCard from "./TabsCard";
+import useWindowWidth from "@/hooks/useWindowWidth";
 import { cardsData } from "@/lib/data";
-import Cards from "../common/LandingCards";
+import { useState } from "react";
+import { Button } from "../ui/button";
 
 const TabFeatures = () => {
+  const windowWidth = useWindowWidth();
+  const [showAllCards, setShowAllCards] = useState(false);
+
+  const toggleCardVisibility = () => {
+    setShowAllCards((prevState) => !prevState);
+  };
+
+  const visibleCards = showAllCards ? cardsData.length : 2;
   return (
     <div className="lg:px-8">
-      <div className="px-2">
+      <div className="px-8">
         <div className="text-2xl font-bold text-foreground">
           Tab into the features which let users come back
         </div>
@@ -38,42 +49,114 @@ const TabFeatures = () => {
         </TabsList>
         <TabsContent value="create" className="mt-6 px-4">
           <div className="grid gap-6 sm:grid-row-1 md:grid-cols-3">
-            {cardsData.map((item, index) => (
-              <Cards
-                key={index}
-                imageUrl={item.imageUrl}
-                description={item.description}
-                title={item.title}
-                href={item.href}
-              />
-            ))}
+          {windowWidth <= 400
+              ? cardsData.slice(0, visibleCards).map((item, index) => {
+                  return (
+                    <TabsCard
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })
+              : cardsData.map((item, index) => {
+                  return (
+                    <TabsCard
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })}
           </div>
+          {cardsData.length > 2 && windowWidth <= 400 && (
+            <div className="mt-6 text-center">
+              <Button
+                className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"
+                onClick={toggleCardVisibility}
+              >
+                {showAllCards ? "View Less" : "View More"}
+              </Button>
+            </div>
+          )}
         </TabsContent>
         <TabsContent value="engage" className="mt-4 px-4">
           <div className="grid gap-4 sm:grid-row-1 md:grid-cols-3">
-            {cardsData.map((item, index) => (
-              <Cards
-                key={index}
-                imageUrl={item.imageUrl}
-                description={item.description}
-                title={item.title}
-                href={item.href}
-              />
-            ))}
+          {windowWidth <= 400
+              ? cardsData.slice(0, visibleCards).map((item, index) => {
+                  return (
+                    <TabsCard
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })
+              : cardsData.map((item, index) => {
+                  return (
+                    <TabsCard
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })}
           </div>
+          {cardsData.length > 2 && (
+            <div className="mt-6 text-center">
+              <Button
+                className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"
+                onClick={toggleCardVisibility}
+              >
+                {showAllCards ? "View Less" : "View More"}
+              </Button>
+            </div>
+          )}
         </TabsContent>
         <TabsContent value="monetize" className="mt-4 px-4">
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {cardsData.map((item, index) => (
-              <Cards
-                key={index}
-                imageUrl={item.imageUrl}
-                description={item.description}
-                title={item.title}
-                href={item.href}
-              />
-            ))}
+          {windowWidth <= 400
+              ? cardsData.slice(0, visibleCards).map((item, index) => {
+                  return (
+                    <TabsCard
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })
+              : cardsData.map((item, index) => {
+                  return (
+                    <TabsCard
+                      key={index}
+                      imageUrl={item.imageUrl}
+                      description={item.description}
+                      title={item.title}
+                      href={item.href}
+                    />
+                  );
+                })}
           </div>
+          {cardsData.length > 2 && (
+            <div className="mt-6 text-center">
+              <Button
+                className="inline-block px-4 py-2 text-foreground rounded focus:outline-none sm:block md:hidden"
+                onClick={toggleCardVisibility}
+              >
+                {showAllCards ? "View Less" : "View More"}
+              </Button>
+            </div>
+          )}
         </TabsContent>
       </Tabs>
     </div>
