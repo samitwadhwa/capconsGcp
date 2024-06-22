@@ -1,9 +1,9 @@
 "use client"
-
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
-
+import OtpInput, { OTPInputProps } from "react-otp-input";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils"
 
 const InputOTP = React.forwardRef<
@@ -58,6 +58,32 @@ const InputOTPSlot = React.forwardRef<
 })
 InputOTPSlot.displayName = "InputOTPSlot"
 
+type OtpOptions = Omit<OTPInputProps, "renderInput">;
+ 
+type OtpStyledInputProps = {
+  className?: string;
+} & OtpOptions;
+
+export const OtpStyledInput = ({
+  className,
+  ...props
+}: OtpStyledInputProps) => {
+  return (
+    <OtpInput
+      {...props}
+      renderInput={(inputProps) => (
+        <Input
+          {...inputProps}
+          className={cn("!w-10 !appearance-none selection:bg-none", className)}
+        />
+      )}
+      containerStyle={`flex  items-center flex-wrap  text-2xl font-bold ${
+        props.renderSeparator ? "gap-1" : "gap-x-4 gap-y-2"
+      }`}
+    />
+  )
+};
+
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
@@ -68,4 +94,4 @@ const InputOTPSeparator = React.forwardRef<
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator}

@@ -26,7 +26,9 @@ const config = {
       },
       width: {
         '18rem': '18rem',
-        '25rem': '25rem'
+        '25rem': '25rem',
+        '20rem': '20rem',
+        '16rem': "16rem"
       },
       colors: {
         border: "hsl(var(--border))",

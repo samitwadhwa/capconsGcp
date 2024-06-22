@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import ReviewCard from "./ReviewCard";
 import useWindowWidth from "@/hooks/useWindowWidth";

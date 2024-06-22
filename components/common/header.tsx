@@ -10,7 +10,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { callsToAction, products } from "@/lib/models";
-import user from "@/public/images/accountUser.png";
 
 const Header = () => {
   return (

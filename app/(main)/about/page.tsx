@@ -116,6 +116,12 @@ export default function Example() {
           </div>
         </div>
       </main>
+
+      <section className="bg-[#8C8C8C] text-4xl text-bold flex items-center h-[100vh] justify-center">
+          Video
+      </section>
+
+
       <section className="bg-background dark">
         <div className="container  px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
           <h2 className="text-2xl text-center mx-auto font-semibold tracking-tight xl:text-3xl text-foreground">
