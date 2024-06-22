@@ -114,7 +114,7 @@ const Header = () => {
             </PopoverContent>
           </Popover>
           <a
-            href="#"
+            href="/about"
             className="text-base font-semibold leading-6 text-foreground"
           >
             About Us

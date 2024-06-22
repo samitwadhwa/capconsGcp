@@ -70,7 +70,7 @@ const Main = () => {
               Everything You Need To Launch And Grow
             </div>
           </div>
-          <div className="grid mt-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
+          <div className="grid mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
             {windowWidth <= 400
               ? cardsData.slice(0, visibleCards).map((item, index) => {
                   return (
@@ -109,7 +109,7 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="h-[70vh] w-full mt-12 sm:mt-0">
+      <section className="h-[70vh] w-full mt-12 md:mt-0">
         <ContactForm />
       </section>
     </main>
