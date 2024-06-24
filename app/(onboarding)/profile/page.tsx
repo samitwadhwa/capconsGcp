@@ -89,7 +89,7 @@ export default function Profile() {
           className="absolute h-full w-2/4 w-[60%] object-cover"
           src={background.src}
           alt=""
-          width={1220}
+          width={1920}
           height={1080}
         />
       </div>
