@@ -65,7 +65,7 @@ function Verify() {
           <h6 className='h6 text-sm mr-2 text-white'>Didn&#39;t get a code?</h6>
           <h6 className='text-[#D6A7FF] text-sm h6 cursor-pointer underline'><a href="/signup">Resend</a></h6>
         </div>
-            <Button type="submit" className="mt-3 font-bold">Verify</Button>
+            <Button type="submit" className="mt-3 text-foreground font-bold">Verify</Button>
           </form>
         </Form>
         </div>

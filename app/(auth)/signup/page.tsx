@@ -124,7 +124,7 @@ function Signup() {
             </button>
             </div>
             <div className='flex justify-between items-center mb-5'>
-              <h6 className='h6 text-xs text-[#F4F4F4]'>By signing up, you agree to our <a href="/terms" className='underline text-[#D6A7FF]'>Terms</a>, <a href="/policy" className='underline text-[#D6A7FF]'>Privacy Policy</a> and <a href="/cookie-policy" className='underline text-[#D6A7FF]'>Cookies Policy.</a></h6>
+              <h6 className='h6 text-xs dark:text-[#F4F4F4]'>By signing up, you agree to our <a href="/terms" className='underline text-[#D6A7FF]'>Terms</a>, <a href="/policy" className='underline text-[#D6A7FF]'>Privacy Policy</a> and <a href="/cookie-policy" className='underline text-[#D6A7FF]'>Cookies Policy.</a></h6>
             </div>
             <Button type="submit" className="w-full">
               Sign up

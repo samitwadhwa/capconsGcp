@@ -42,7 +42,7 @@ function Login() {
               id="repassword"
               type={showPassword ? "text" : "password"}
               placeholder="Re-enter your new Password"
-              className='rounded-sm shadow appearance-none py-2 px-3 leading-tight bg-transparent w-19.5rem focus:outline-none focus:shadow-outline border text-slight-grey border-custom-Border'
+              className='rounded-sm shadow appearance-none py-2 px-3 leading-tight bg-transparent w-19.5rem focus:outline-none focus:shadow-outline border border-custom-Border'
               required
               />
              <button
@@ -58,7 +58,7 @@ function Login() {
             </button>
             </div>
             
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full text-foreground">
               Reset
             </Button>
           </div>

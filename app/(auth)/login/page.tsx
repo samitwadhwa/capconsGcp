@@ -101,7 +101,7 @@ function Login() {
           </div>
           <h6 className='text-[#D6A7FF] cursor-pointer text-h6 h6 hover:underline'> <a href="/changepass">Forget password?</a> </h6>
         </div>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full text-foreground">
               Login
             </Button>
           </div>
