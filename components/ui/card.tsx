@@ -23,6 +23,15 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
 );
 Card.displayName = "Card";
 
+const CardMedia = React.forwardRef<HTMLDivElement, CardMediaProps>(
+  ({ imageUrl, className, ...props }, ref) => (
+    <div ref={ref} className={cn("relative h-60 overflow-hidden rounded-t-lg", className)} {...props}>
+      <img src={imageUrl} alt="" className="object-cover w-full h-full" />
+    </div>
+  )
+);
+CardMedia.displayName = "CardMedia";
+
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   imageUrl?: string;
@@ -87,4 +96,4 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { Card, CardHeader, CardFooter, CardMedia , CardTitle, CardDescription, CardContent }
