@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
 import "./globals.css";
 import React from "react";
 import TankQuerySetup from "@/components/tank-querysetup";
@@ -26,7 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TankQuerySetup>{children}</TankQuerySetup>
+          <TankQuerySetup>
+            <Toaster />
+            {children}
+          </TankQuerySetup>
         </ThemeProvider>
       </body>
     </html>
