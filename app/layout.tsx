@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "sonner";
 import "./globals.css";
 import React from "react";
 import TankQuerySetup from "@/components/tank-querysetup";
+import UtilitiesProvider from "@/providers/UtilitiesProvider";
 
 const mulish = Mulish({ subsets: ["latin"] });
 
@@ -28,8 +29,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TankQuerySetup>
-            <Toaster />
-            {children}
+            <UtilitiesProvider>
+              <Toaster />
+              {children}
+            </UtilitiesProvider>
           </TankQuerySetup>
         </ThemeProvider>
       </body>
