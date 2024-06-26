@@ -21,3 +21,21 @@ type SlideProps = {
   children: React.ReactNode;
   color: string;
 };
+
+interface CardMediaProps extends React.HTMLAttributes<HTMLDivElement> {
+  imageUrl: string;
+}
+
+interface Blog {
+  category: string;
+  title: string;
+  description?: string;
+  username: string;
+  date: string;
+  imageUrl: string;
+}
+
+interface BlogSectionProps {
+  title: string;
+  blogs: typeof blogData.latestBlogs;
+}

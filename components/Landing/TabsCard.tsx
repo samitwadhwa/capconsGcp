@@ -25,7 +25,7 @@ export default function TabsCard(post: CardProps) {
 
         <a
           href={post.href}
-          className="group  inline-flex mt-12 sm:mt-24 lg:mt-16 xl:mt-24 items-center gap-1 text-sm font-medium text-blue-600"
+          className="group  inline-flex mt-12 sm:mt-24 lg:mt-16 xl:mt-24 items-center gap-1 text-sm font-medium text-foreground"
         >
           Link to Page
           <span

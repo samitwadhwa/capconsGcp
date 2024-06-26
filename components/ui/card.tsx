@@ -4,23 +4,24 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, imageUrl, ...props }, ref) => (
+  ({ className, imageUrl, noPadding, ...props }, ref) => (
     <div
       ref={ref}
       className={cn("rounded-lg border bg-card text-card-foreground shadow-sm", className)}
       {...props}
     >
       {imageUrl && (
-        <div className="relative h-60 overflow-hidden rounded-t-lg">
+        <div className="relative h-56 overflow-hidden rounded-t-lg">
           <img src={imageUrl} alt="" className="object-cover w-full h-full" />
         </div>
       )}
-      <div className="p-6 pt-0">
+      <div className={cn({ "p-6 pt-0": !noPadding })}>
         {props.children}
       </div>
     </div>
   )
 );
+
 Card.displayName = "Card";
 
 interface CardMediaProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -39,6 +40,7 @@ CardMedia.displayName = "CardMedia";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   imageUrl?: string;
+  noPadding?: boolean;
 }
 
 const CardHeader = React.forwardRef<
