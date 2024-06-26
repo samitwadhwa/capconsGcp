@@ -18,7 +18,7 @@ export default function BlogCard(post: CardProps) {
       <div className="xl:p-4 p-2 sm:p-4">
         <a href="#">
           <h3 className="text-lg font-medium text-foreground">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            App Builder
           </h3>
         </a>
 
@@ -32,7 +32,7 @@ export default function BlogCard(post: CardProps) {
 
         <a
           href="#"
-          className="group  inline-flex mt-12 sm:mt-24 lg:mt-16 xl:mt-24 items-center gap-1 text-sm font-medium text-blue-600"
+          className="group  inline-flex mt-12 sm:mt-24 lg:mt-16 xl:mt-24 items-center gap-1 text-sm font-medium text-foreground"
         >
           Link to Page
           <span

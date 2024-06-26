@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 const ContactForm = () => {
   return (
-    <div className="bg-formimage grid transition-all xl:grid-cols-3  bg-cover bg-no-repeat h-full">
+    <div className="bg-formimage grid transition-all xl:grid-cols-3  bg-cover bg-no-repeat h-full opcaity-50">
       <div className="lg:col-span-2 hidden xl:grid transition-all grid-cols-3 ">
         <div className="border-4 border-black border-t-transparent border-l-transparent"></div>
         <div className="border-4 border-black border-t-transparent"></div>
@@ -20,7 +20,7 @@ const ContactForm = () => {
         <div className="border-4 border-black border-r-transparent border-b-transparent"></div>
       </div>
 
-      <div className="bg-black/60 px-4 md:px-auto flex flex-col items-center">
+      <div className="px-4 md:px-auto flex flex-col items-center">
         <div className="sm:mt-8">
           {" "}
           <div className="sm:mx-auto space-y-4 sm:w-full sm:max-w-sm">
@@ -42,7 +42,7 @@ const ContactForm = () => {
                     type="text"
                     placeholder="Name Social media Platform"
                     required
-                    className="block w-full border-0 py-2 text-foreground shadow-sm bg-transparent ring-1 ring-inset ring-gray-300/80 placeholder:text-foreground focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full border border-foreground py-2 text-foreground shadow-sm bg-transparent ring-1 ring-inset ring-gray-300/80 placeholder:text-foreground focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -54,7 +54,7 @@ const ContactForm = () => {
                     type="text"
                     placeholder="Your username"
                     required
-                    className="block w-full  border-0 py-2 text-foreground shadow-sm bg-transparent ring-1 ring-inset ring-gray-300/80 placeholder:text-foreground focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    className="block w-full  border border-foreground py-2 text-foreground shadow-sm bg-transparent ring-1 ring-inset ring-gray-300/80 placeholder:text-foreground focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -68,7 +68,7 @@ const ContactForm = () => {
                     autoComplete="email"
                     placeholder="Email Id"
                     required
-                    className="block w-full border-0 py-2 text-foreground shadow-sm bg-transparent ring-1 ring-inset ring-gray-300/80 placeholder:text-foreground focus:ring-2 focus:ring-inset"
+                    className="block w-full border border-foreground py-2 text-foreground shadow-sm bg-transparent ring-1 ring-inset ring-gray-300/80 placeholder:text-foreground focus:ring-2 focus:ring-inset"
                   />
                 </div>
               </div>

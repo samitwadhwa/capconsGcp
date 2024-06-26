@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import {
   Popover,
@@ -20,11 +19,12 @@ const Header = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <Image
+            <span className="sr-only">Your Company</span>
+            <img
               className="h-8 w-auto"
               height={32}
               width={"50"}
-              src="/logo.svg"
+              src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/CapconsLogo.webp"
               alt=""
             />
           </a>

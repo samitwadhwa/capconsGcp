@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Separator } from "@/components/ui/separator";
 import { IoIosArrowDown } from "react-icons/io";
@@ -34,8 +33,8 @@ const MobileHeader: React.FC = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="p-1.5">
             <span className="sr-only">Your Company</span>
-            <Image
-              src="/logo.svg"
+            <img
+              src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/CapconsLogo.webp"
               alt="Logo"
               width={50}
               height={32}

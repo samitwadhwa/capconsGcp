@@ -7,8 +7,6 @@ import TabFeatures from "@/components/Landing/TabFeatures";
 import ReviewSection from "@/components/Landing/ReviewSection";
 import ContactForm from "@/components/Landing/ContactForm";
 import woodlandLogo from "@/public/images/woodlandLogo.png";
-import woodlandLogo2 from "@/public/images/WoodsShield2.png";
-import woodlandLogo3 from "@/public/images/WoodsShield.png";
 import MobilePhone from "@/components/Landing/mobile-phone";
 import HeroSection from "@/components/Landing/hero-section";
 import Carousel from "@/components/Landing/Carousel/Carousel";
@@ -32,9 +30,9 @@ const Main = () => {
       <HeroSection />
 
       <div className="flex justify-evenly w-full p-4 items-center border mt-10">
-        <img className="w-28 h-20" src={woodlandLogo.src} alt="comapny logo" />
-        <img className="w-28 h-20" src={woodlandLogo2.src} alt="company logo" />
-        <img className="w-20 h-20" src={woodlandLogo3.src} alt="company logo" />
+        <img className="w-28 h-20" src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/woodlandLogo.webp" alt="comapny logo" />
+        <img className="w-28 h-20" src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/WoodsShield2.webp" alt="company logo" />
+        <img className="w-20 h-20" src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/WoodsShield.webp" alt="company logo" />
       </div>
 
       <Carousel />
