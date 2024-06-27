@@ -2,9 +2,11 @@
 import BlogCard from "@/components/Landing/BlogsCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription, CardMedia } from "@/components/ui/card";
+// import useWindowWidth from "@/hooks/useWindowWidth";
 import { blogData } from "@/lib/data";
 import Image from 'next/image';
 import { useState } from "react";
+// import {Spinner} from '@/components/ui/spinner';
 
 interface BlogSectionProps {
   title: string;
@@ -25,6 +27,18 @@ interface AllBlogsSectionProps {
 }
 
 const BlogSection: React.FC<BlogSectionProps> = ({ title, blogs }) => {
+
+  // const windowWidth = useWindowWidth();
+  // const [isMounted, setIsMounted] = useState(false);
+
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
+
+  // if (!isMounted) {
+  //   return <Spinner size='medium'/>; // Or return a loading spinner if preferred
+  // }
+  
   if (!blogs || blogs.length === 0) {
     return null; // Don't render anything if blogs are undefined or empty
   }
@@ -33,22 +47,30 @@ const BlogSection: React.FC<BlogSectionProps> = ({ title, blogs }) => {
     <section className="my-8">
       <h2 className="text-xl font-bold mb-4">{title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <div className="md:col-span-2 h-[486.11px]">
-          <Card imageUrl={blogs[0].imageUrl} className="w-full h-full shadow-lg relative">
-            <Image src={blogs[0].imageUrl} alt={blogs[0].title} layout="fill" objectFit="cover" className="rounded-lg" />
-            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t bg-black bg-opacity-50 from-black via-transparent to-transparent p-4">
-              <CardHeader className="text-white">
-                <div className="bg-[#62447D] px-2 py-1 mb-2 rounded w-28">{blogs[0].category}</div>
-                <CardTitle>{blogs[0].title}</CardTitle>
-                {blogs[0].description && <CardDescription className="text-foreground">{blogs[0].description}</CardDescription>}
-              </CardHeader>
-              <CardFooter className="flex justify-between text-white mt-4">
-                <span>{blogs[0].username}</span>
-                <span>{blogs[0].date}</span>
-              </CardFooter>
-            </div>
-          </Card>
-        </div>
+      <div className="md:col-span-2 h-full md:h-[486.11px] relative">
+  <Card imageUrl={blogs[0].imageUrl} className="w-full h-full shadow-lg relative bg-cover bg-center bg-no-repeat">
+    <Image 
+      src={blogs[0].imageUrl} 
+      alt={blogs[0].title} 
+      layout="fill" 
+      objectFit="cover" 
+      className="rounded-lg bg-cover bg-center bg-no-repeat" 
+    />
+    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-transparent to-transparent p-4 flex flex-col justify-end h-full">
+      <CardHeader className="text-white mb-auto md:mb-0">
+        <div className="bg-[#62447D] px-2 py-1 mb-2 rounded w-28">{blogs[0].category}</div>
+        <CardTitle>{blogs[0].title}</CardTitle>
+        {blogs[0].description && <CardDescription className="text-foreground">{blogs[0].description}</CardDescription>}
+      </CardHeader>
+      <CardFooter className="flex justify-between text-white mt-4">
+        <span>{blogs[0].username}</span>
+        <span>{blogs[0].date}</span>
+      </CardFooter>
+    </div>
+  </Card>
+</div>
+
+
         <div className="md:col-span-3 grid grid-cols-2 gap-4">
           {blogs.slice(1).map((blog, index) => (
             <div key={index} className="h-[235px]">
@@ -77,11 +99,13 @@ const BlogSection: React.FC<BlogSectionProps> = ({ title, blogs }) => {
   );
 };
 const TrendingBlogSection: React.FC<TrendingBlogSectionProps> = ({ title, TrendingBlogs }) => {
+  
+  const [showAllCards, setShowAllCards] = useState(false);
+  
   if (!TrendingBlogs || TrendingBlogs.length === 0) {
     return null; // Don't render anything if blogs are undefined or empty
   }
 
-  const [showAllCards, setShowAllCards] = useState(false);
 
   const toggleCardVisibility = () => {
     setShowAllCards((prevState) => !prevState);
@@ -115,11 +139,13 @@ const TrendingBlogSection: React.FC<TrendingBlogSectionProps> = ({ title, Trendi
 };
 
 const EditorsPickSection: React.FC<EditorsPickSectionProps> = ({ title, editorsPick }) => {
+ 
+
+  const [showAllCards, setShowAllCards] = useState(false); // Ensure useState is not called conditionally
+
   if (!editorsPick || editorsPick.length === 0) {
     return null; // Don't render anything if blogs are undefined or empty
   }
-
-  const [showAllCards, setShowAllCards] = useState(false);
 
   const toggleCardVisibility = () => {
     setShowAllCards((prevState) => !prevState);
@@ -165,10 +191,12 @@ const EditorsPickSection: React.FC<EditorsPickSectionProps> = ({ title, editorsP
 
 };
 const AllBlogsSection: React.FC<AllBlogsSectionProps> = ({ title, allblogs }) => {
+  
+  const [showAllCards, setShowAllCards] = useState(false); // Ensure useState is not called conditionally
+
   if (!allblogs || allblogs.length === 0) {
     return null; // Don't render anything if blogs are undefined or empty
   }
-  const [showAllCards, setShowAllCards] = useState(false);
 
   const toggleCardVisibility = () => {
     setShowAllCards((prevState) => !prevState);
@@ -212,10 +240,10 @@ const AllBlogsSection: React.FC<AllBlogsSectionProps> = ({ title, allblogs }) =>
 const BlogPage: React.FC = () => {
   return (
     <div className="container mx-auto">
-      <header className="flex justify-between items-center mb-8 mt-8">
+      <header className="flex justify-between items-center mb-8 mt-8 flex-wrap">
         <h1 className="text-2xl font-bold">CapCons. Blog</h1>
-        <div className="flex items-center">
-          <input type="text" placeholder="Search keywords" className="bg-[#2A2A2E] p-2 w-full min-w-[12rem] sm:min-w-[18rem] md:min-w-[25rem] lg:min-w-[25rem]" />
+        <div className="flex items-center flex-nowrap mt-2 md:mt-0">
+          <input type="text" placeholder="Search keywords" className="bg-[#2A2A2E] p-2 w-full min-w-[16rem] sm:min-w-[18rem] md:min-w-[25rem] lg:min-w-[25rem]" />
           <Button>
             <img className="w-7 h-6" src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/SearchIcon.webp" alt="" />
           </Button>
