@@ -37,6 +37,7 @@ export const blogData = {
       username: 'Username',
       date: 'June 19, 2024',
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogPhotography.webp',
+      likes: 800
     },
     {
       category: 'Tech',
@@ -72,31 +73,37 @@ export const blogData = {
       category: "Technology",
       title: "Headline: Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero",
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogTech.webp',
+      likes: 800
     },
     {
       category: "Technology",
       title: "Headline: Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero",
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogTech.webp',
+      likes: 800
     },
     {
       category: "Technology",
       title: "Headline: Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero",
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogTech.webp',
+      likes: 800
     },
     {
       category: "Technology",
       title: "Headline: Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero",
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogTech.webp',
+      likes: 800
     },
     {
       category: "Technology",
       title: "Headline: Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero",
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogTech.webp',
+      likes: 800
     },
     {
       category: "Technology",
       title: "Headline: Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero",
       imageUrl: 'https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/BlogTech.webp',
+      likes: 800
     },
   ],
   editorsPick: [
@@ -107,6 +114,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -115,6 +123,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -123,6 +132,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -131,6 +141,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -139,6 +150,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -147,6 +159,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -155,6 +168,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -163,6 +177,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
     {
       category: 'App Development',
@@ -171,6 +186,7 @@ export const blogData = {
       username: 'John Doe',
       date: '20 Oct 2024',
       imageUrl: 'https://s3-alpha-sig.figma.com/img/cd11/9385/d9f85524aeb92a1c3cdac16ca712118f?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JJOoI2t2L3tV2qT4PGDVhpENbuVGeidKbAd6ooBOVjMrOkRmgzur4sq-epqKQpcnlCJ7XqPLMtGZSunAqEvdht2pOkonPBBcR~0ZOoNzack28HijRwVUIv-qZWwrxV4VcT53Vz1EQUbyxncOZWRABsJU9fj6TLulgr7MiBQ0slznulCxVrifL2aS-Dx7Lej3JVNJr93OemX-02OB37jdOdASm3xgBDPMFycsGe5MmqtByNY6Wms6niQ50YiAaQ34Wb-se59ngTbuN~H3s6xPB0uFKkUMDljcu~SwxnPpu0BwEVtH~7Sh4O7ZSmBDkd6X~~TTnufsSfVfaheOyyN5PA__',
+      likes: 800
     },
   ],
   allBlogsData: [
@@ -181,6 +197,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -189,6 +206,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -197,6 +215,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -205,6 +224,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -213,6 +233,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -221,6 +242,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -229,6 +251,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -237,6 +260,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
     {
       imageUrl:
@@ -245,6 +269,7 @@ export const blogData = {
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       title: "App Builder",
       href: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
+      likes: 800
     },
   ],
 };

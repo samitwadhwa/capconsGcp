@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      margin: {
+        '0.4': '0.4rem',
+      },
+      padding: {
+        '0.4': '0.4rem',
+      },
       backgroundImage: {
         cardGradient1:
           "linear-gradient(149.83deg, #AB001F 10.88%, #9F0C85 44.96%, #9AA6AD 83.65%);",
