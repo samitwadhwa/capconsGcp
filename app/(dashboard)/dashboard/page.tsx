@@ -1,13 +1,12 @@
-"use client";
-import IDE from "@/components/dashboard/editor/IDE";
+import { DataTable } from "@/components/dashboard/tables/data-table";
 import React from "react";
+import { columns } from "@/components/dashboard/tables/columns";
+import { data } from "./task";
 
-type Props = {};
-
-const Dashboard = (props: Props) => {
+const Dashboard = async () => {
   return (
     <div>
-      <IDE />
+      <DataTable columns={data} data={columns} />
     </div>
   );
 };

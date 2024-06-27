@@ -9,7 +9,7 @@ interface SidebarToggleProps {
 
 export function SidebarToggle({ isOpen, setIsOpen }: SidebarToggleProps) {
   return (
-    <div className=" rounded-full bg-muted overflow-hidden absolute top-[22px] -right-[16px] z-20  ">
+    <div className=" hidden lg:block rounded-full bg-muted overflow-hidden absolute top-[22px] -right-[16px] z-20  ">
       <Button
         onClick={() => setIsOpen?.()}
         className="rounded-md hover:bg-white/20 border-none bg-muted w-8 h-8"

@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Suspense } from "react";
 
-const Menu = dynamic(() => import("./menu"), { ssr: true });
+const Menu = dynamic(() => import("./menu"), { ssr: false });
 
 export function Sidebar() {
   const toggleObj = useToggle();

@@ -130,7 +130,18 @@ export function getMenuList(pathname: string): Group[] {
           label: "Users",
           active: pathname.includes("/dashboard/users"),
           icon: CiUser,
-          submenus: [],
+          submenus: [
+            {
+              href: "/dashboard/users/adduser",
+              label: "Add New User",
+              sactive: false,
+            },
+            {
+              href: "/dashboard/users/profile",
+              label: "Profile",
+              sactive: false,
+            },
+          ],
         },
         {
           href: "/dashboard/billing",
