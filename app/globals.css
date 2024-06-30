@@ -72,3 +72,41 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.fr-view.fr-element {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground)) !important;
+  border: none !important;
+}
+
+.fr-box.gray-theme.fr-basic.fr-top {
+  border: none !important;
+}
+#fr-logo {
+  display: none;
+}
+
+.fr-toolbar.fr-desktop.fr-top.fr-basic.fr-sticky-off {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--muted)) !important;
+}
+
+.dark-theme .fr-second-toolbar {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--muted)) !important;
+}
+
+.fr-second-toolbar {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--muted)) !important;
+}
+
+.dark-theme.fr-box.fr-basic .fr-wrapper {
+  border: none !important;
+  border-bottom: 1px solid hsl(var(--muted)) !important;
+}
+
+.fr-box.fr-basic .fr-wrapper {
+  border: none !important;
+  border-bottom: 1px solid hsl(var(--muted)) !important;
+}
