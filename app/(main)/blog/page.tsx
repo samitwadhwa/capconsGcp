@@ -247,7 +247,7 @@ const BlogPage: React.FC = () => {
       <header className="flex justify-between items-center mb-8 mt-8 flex-wrap">
         <h1 className="text-2xl font-bold">CapCons. Blog</h1>
         <div className="flex items-center flex-nowrap mt-2 md:mt-0">
-          <input type="text" placeholder="Search keywords" className="bg-[#2A2A2E] p-2 w-full min-w-[16rem] sm:min-w-[18rem] md:min-w-[25rem] lg:min-w-[25rem]" />
+          <input type="text" placeholder="Search keywords" className="bg-[#2A2A2E] p-2 w-full min-w-[24rem] sm:min-w-[18rem] md:min-w-[25rem] lg:min-w-[25rem]" />
           <Button>
             <img className="w-7 h-6" src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/SearchIcon.webp" alt="" />
           </Button>

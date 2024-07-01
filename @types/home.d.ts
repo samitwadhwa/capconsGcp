@@ -34,8 +34,3 @@ interface Blog {
   date: string;
   imageUrl: string;
 }
-
-interface BlogSectionProps {
-  title: string;
-  blogs: typeof blogData.latestBlogs;
-}
