@@ -275,6 +275,7 @@ export const blogData = {
   ],
   blogsDetailedCardArray: [
     {
+      id: 1,
       category: 'App Development',
       title: 'App Builder',
       description: 'Lorem ipsum dolor sit amet consectetur. Odio interdum nec...',
@@ -286,6 +287,7 @@ export const blogData = {
 
     },
     {
+      id: 2,
       category: 'App Development',
       title: 'App Builder',
       description: 'Lorem ipsum dolor sit amet consectetur. Odio interdum nec...',
@@ -296,6 +298,7 @@ export const blogData = {
       comment: 830,
     },
     {
+      id: 3,
       category: 'App Development',
       title: 'App Builder',
       description: 'Lorem ipsum dolor sit amet consectetur. Odio interdum nec...',
@@ -306,6 +309,7 @@ export const blogData = {
       comment: 830,
     },
     {
+      id: 4,
       category: 'App Development',
       title: 'App Builder',
       description: 'Lorem ipsum dolor sit amet consectetur. Odio interdum nec...',
@@ -316,6 +320,7 @@ export const blogData = {
       comment: 830,
     },
     {
+      id: 5,
       category: 'App Development',
       title: 'App Builder',
       description: 'Lorem ipsum dolor sit amet consectetur. Odio interdum nec...',
@@ -326,6 +331,7 @@ export const blogData = {
       comment: 830,
     },
     {
+      id: 6,
       category: 'App Development',
       title: 'App Builder',
       description: 'Lorem ipsum dolor sit amet consectetur. Odio interdum nec...',
@@ -338,8 +344,9 @@ export const blogData = {
   ]
 };
 
-export const events = [
-  {
+export const events = 
+{
+  eventsListed: [{
     id: 1,
     promoted: true,
     category: 'Comedy',
@@ -354,11 +361,11 @@ export const events = [
   },
   {
     id: 2,
-    promoted: true,
+    promoted: false,
     category: 'Kids',
     title: 'Magic show by G-One',
     description: 'Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero tortor est id sit convallis quam vitae. Non pharetra enim quis pellentesque commodo parturient.',
-    date: '2024, September 10',
+    date: '2024, September 20',
     time: '00:00 AM',
     location: 'Location, Country',
     price: '600.00',
@@ -367,7 +374,7 @@ export const events = [
   },
   {
     id: 3,
-    promoted: true,
+    promoted: false,
     category: 'Comedy',
     title: 'Comedy night with Anubhav Singh Bassi',
     description: 'Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero tortor est id sit convallis quam vitae. Non pharetra enim quis pellentesque commodo parturient.',
@@ -380,7 +387,7 @@ export const events = [
   },
   {
     id: 4,
-    promoted: true,
+    promoted: false,
     category: 'Comedy',
     title: 'Comedy night with Anubhav Singh Bassi',
     description: 'Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero tortor est id sit convallis quam vitae. Non pharetra enim quis pellentesque commodo parturient.',
@@ -393,7 +400,7 @@ export const events = [
   },
   {
     id: 5,
-    promoted: true,
+    promoted: false,
     category: 'Comedy',
     title: 'Comedy night with Anubhav Singh Bassi',
     description: 'Lorem ipsum dolor sit amet consectetur. Condimentum faucibus libero tortor est id sit convallis quam vitae. Non pharetra enim quis pellentesque commodo parturient.',
@@ -403,9 +410,52 @@ export const events = [
     price: '600.00',
     imageUrl: 'https://s3-alpha-sig.figma.com/img/3df4/c085/d62fe76d8ed66b05838b56c5b7339b44?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VSwtvo~fb8b24CgZh0S8965tI5tQ4IvAvRsWzctl5~G3x2wyCcN1QsnGidnHGYiZIb30WhJKC89xo9XqSsuOaJu3ydAljNllgPmihTwit5MTeiHE32BttwPpdVFc-VxoZbjLNpP2D5XywO5hNXF13sp9YNoSCcIudOv6UBthBQ7IrzJXPDkhNy8bGYM4gze0cR7X-a3nOikXrZ163ytKR20nsB4v9hlbsb0kJbqjEbmoIEjwdKlmb3lz3qwsRcYE6lDybNCgFX12Rp188ZRICfAW9aKevMGa15j-vw8cQpfTuKvLx-~O1SZ0zuic7mc9q~v2yFpHrWfu51kyBo2w3w__',
     likes: 830,
-  },
-  // Add more events here
-];
+  }
+
+],
+  artists: [
+    {
+      id:0,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:1,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:2,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:3,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:4,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:5,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:6,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    },
+    {
+      id:7,
+      name: 'Satyam Singh',
+      profession: 'Singer',
+    }
+  ]
+}
 
 export const ReviewCardsData = [
   {
@@ -509,4 +559,20 @@ export const FeaturedCardData: FeaturedCardProps[] = [
         "You can send messages and chat with someone out in the world and send them an interactive hello!",
     },
   ];
+
+  export const dummyPersonalInfo = {
+    general: {
+      name: "Smriti Gupta",
+      dob: "04-03-1997",
+      email: "smritigupta4022@gmail.com",
+      contact: "+91-0000000000",
+      location: "Gurugram, India",
+      nationality: "Indian"
+    },
+    education: {
+      school: "Blue Bells Model School",
+      degree: "Masters in Interaction Design, DTU",
+      socialLinks: "www.behance8.com"
+    }
+  };
   

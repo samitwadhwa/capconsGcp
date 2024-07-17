@@ -1,22 +1,25 @@
 "use client"
 import React, { useState } from 'react';
-import { Card, CardHeader, CardFooter, CardMedia, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { events } from '@/lib/data';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { DatePicker } from '@/components/ui/DatePicker';
+import EventCard from '@/components/EventsCard/EventsCard';
+import useWindowWidth from "@/hooks/useWindowWidth";
+
 
 const EventListing = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [date, setDate] = useState('');
   const [location, setLocation] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const windowWidth = useWindowWidth();
 
-  const tags = ["Comedy", "Workshops", "Music Shows", "Meet Ups", "Kids", "Performances", "Exhibitions", "Screening", "Talks", "Spirituality"];
+  const tags = ["Comedy Shows", "Workshops", "Music Shows", "Meets", "Kids", "Performances", "Exhibitions", "Screening", "Talks", "Spirituality"];
 
-  const handleSearch = () => {
-    // Add search functionality here
-  };
+  // const handleSearch = () => {
+  //   // Add search functionality here
+  // };
 
   const handleTagClick = (tag: string) => {
     setSelectedTags(prevTags =>
@@ -24,7 +27,7 @@ const EventListing = () => {
     );
   };
 
-  const filteredEvents = events.filter(event => {
+  const filteredEvents = events.eventsListed.filter(event => {
     if (selectedTags.length === 0) return true;
     return selectedTags.some(tag => event.category.includes(tag));
   });
@@ -32,46 +35,57 @@ const EventListing = () => {
   return (
     <div>
       {/* Background Section */}
-      <div className="relative h-[80vh] bg-cover bg-center" style={{ backgroundImage: "url('https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/backgroundEvents.webp')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col items-center justify-center">
-          <h1 className="text-white text-4xl font-bold">The Best Events for You!</h1>
-          <p className="text-white text-xl">"Connecting People, Creating Memories."</p>
+      <section
+        className="relative w-full bg-no-repeat bg-center bg-cover bg-[url(https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/backgroundEvents.webp)]"
+      >
+        <div className="border mx-auto max-w-screen-3xl px-4 py-32 sm:px-6 flex flex-col justify-center lg:h-[90vh] items-center lg:px-8">
+          <h1 className="text-white text-center text-3xl md:text-5xl font-bold sm:text-2xl">The Best Events for You!</h1>
+          <p className="text-white text-lg md:text-2xl sm:text-base text-center">Connecting People, Creating Memories.</p>
         </div>
-      </div>
+      </section>
 
-      <div className='flex justify-center'>
-        <div className="mt-6 bg-white rounded-lg shadow-lg p-4 w-[90vw] flex justify-center items-center space-x-4">
-          <Input 
-            type="text" 
-            placeholder="Search for event" 
-            className="p-2 border border-[#9B9B9B] text-background bg-foreground !w-25rem  rounded-md w-full" 
-            value={searchTerm} 
-            onChange={(e) => setSearchTerm(e.target.value)} 
-          />
-          <DatePicker className='bg-foreground border-[#9B9B9B] text-background !w-25rem rounded'/>
-          <Input 
-            type="text" 
-            placeholder="Location" 
-            className="p-2 border border-[#9B9B9B] text-background bg-foreground !w-25rem rounded-md w-full" 
-            value={location} 
-            onChange={(e) => setLocation(e.target.value)} 
-          />
-          <Button 
-            className="p-2 rounded-md" 
-            onClick={() => {}}
-          >
-            <img src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/SearchIcon.webp" className='w-8 h-8'  alt="Search" />
-          </Button>
-        </div>
-      </div>
+      {/* Search Section */}
+      {windowWidth >= 600 ?
+        <div className='flex justify-center relative bottom-12'>
+          <div className="mt-6 bg-transparent md:bg-foreground rounded-lg shadow-lg p-8 w-[90vw] flex justify-center items-center space-x-4">
+
+            <Input
+              type="text"
+              placeholder="Search for event"
+              className="p-2 border border-[#212129] md:border-[#9B9B9B] text-foreground md:text-background bg-[#212129] md:bg-foreground !w-25rem  rounded-md w-full"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <DatePicker className='bg-[#212129] md:bg-foreground border-[#212129] md:border-[#9B9B9B] text-foreground md:text-background !w-25rem rounded' />
+            <Input
+              type="text"
+              placeholder="Location"
+              className="p-2 border border-[#212129] md:border-[#9B9B9B] text-foreground md:text-background bg-[#212129] md:bg-foreground !w-25rem rounded-md w-full"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
+
+            <Button
+              className="p-2 rounded-md bg-[#977CCC] hover:bg-primary"
+              onClick={() => { }}
+            >
+              <img
+                src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/SearchIcon.webp"
+                className='w-auto h-auto md:w-8 md:h-8'
+                alt="Search"
+              />
+            </Button>
+
+          </div>
+        </div> : null}
 
       {/* Tags Section */}
-      <div className="container mx-auto p-4">
-        <div className="flex flex-wrap space-x-2 mb-4">
+      <div className="container mx-auto p-6">
+        <div className="flex overflow-x-auto space-x-4 mb-4">
           {tags.map(tag => (
-            <button 
-              key={tag} 
-              className={`px-3 py-1 border rounded-full ${selectedTags.includes(tag) ? 'bg-purple-600 text-white' : 'border-gray-400'}`} 
+            <button
+              key={tag}
+              className={`px-3 py-1 border text-xs rounded border-[#D6A7FF] text-[#D6A7FF] whitespace-nowrap ${selectedTags.includes(tag) ? 'bg-purple-600 text-white' : ''}`}
               onClick={() => handleTagClick(tag)}
             >
               {tag}
@@ -80,38 +94,39 @@ const EventListing = () => {
         </div>
       </div>
 
+
       {/* Upcoming Events Section */}
-      <div className="container mx-auto p-4">
-        <h2 className="text-2xl font-bold mb-4">Upcoming Events</h2>
-        <div className="space-y-4">
-          {filteredEvents.map(event => (
-            <Card key={event.id} className="flex">
-              {event.promoted && <span className="absolute top-0 left-0 bg-teal-500 text-white px-2 py-1">Promoted</span>}
-              <CardMedia imageUrl={event.imageUrl} className="w-1/3" />
-              <div className="p-4 flex flex-col justify-between w-2/3">
-                <div>
-                  <CardHeader className="flex flex-col items-start">
-                    <span className="text-purple-600 text-xs uppercase font-bold">{event.category}</span>
-                    <CardTitle className="text-lg font-semibold">{event.title}</CardTitle>
-                    <CardDescription className="text-sm text-gray-600">{event.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="mt-2">
-                    <div className="flex items-center text-sm text-gray-600 space-x-4">
-                      <span className="flex items-center"><i className="fas fa-map-marker-alt mr-1"></i> {event.location}</span>
-                      <span className="flex items-center"><i className="fas fa-clock mr-1"></i> {event.time}</span>
-                    </div>
-                  </CardContent>
-                </div>
-                <CardFooter className="flex justify-between items-center mt-4">
-                  <span className="text-xl font-bold">₹ {event.price}</span>
-                  <button className="px-4 py-2 bg-purple-600 text-white rounded-md">Book</button>
-                </CardFooter>
-              </div>
-            </Card>
-          ))}
+      {windowWidth <= 500 ?
+        <div className="container mx-auto p-4">
+          <h2 className="text-2xl font-bold mb-4">Upcoming Events</h2>
+
+          <div className='flex justify-start'>
+            <div className="bg-transparent md:bg-foreground rounded-lg shadow-lg w-[90vw] flex justify-center items-center space-x-4">
+
+              <Input
+                type="text"
+                placeholder="Location"
+                className="p-2 border border-[#212129] md:border-[#9B9B9B] text-foreground md:text-background bg-[#212129] md:bg-foreground w-40 rounded-md w-full"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              />
+              <img src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/chevronDown.webp" className='w-6 h-6 relative right-12' alt="chevron" />
+              <DatePicker className='bg-[#212129] md:bg-foreground border-[#212129] md:border-[#9B9B9B] text-foreground md:text-background rounded' />
+
+
+
+            </div>
+          </div>
         </div>
+        : null}
+
+      <div className="space-y-4 md:p-12">
+        {filteredEvents.map(event => (
+          <EventCard key={event.id} event={event} />
+        ))}
       </div>
     </div>
+
   );
 };
 

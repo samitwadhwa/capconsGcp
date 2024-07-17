@@ -3,6 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.gradient-border {
+  position: relative;
+  padding: 2px; /* Adjust the thickness of the gradient border */
+  border-radius: 50%;
+  background: linear-gradient(to right, #2A7FF5 70%, #19C0B6 100%, #B76FF7 100%);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white; /* Adjust to match the background color of your container */
+  border-radius: 50%;
+  margin: 2px; /* Adjust to match the padding */
+}
+
+
 .material-symbols-outlined {
   font-variation-settings:
     "FILL" 0,

@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Capcons: Sign in to explore or create your social Circles",
-  description:
-    "Login to your Social Circles directly as a Creator or a member ? Create your own community for free",
-};
+import { usePathname } from "next/navigation";
+import React from "react";
 
 export default function OnboardingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isProfilePage = pathname === '/profile';
+
   return (
-    <div className="flex justify-center relative bg-no-repeat bg-cover items-center md:bg-[url('/images/onboarding/people.jpg')]">
-      <div className="w-full min-h-screen bg-background/80 ">{children}</div>
+    <div className={`flex justify-center relative ${!isProfilePage ? "bg-no-repeat bg-cover md:bg-[url('/images/onboarding/people.jpg')]" : ''}`}>
+      <div className="w-full min-h-screen bg-background/80">{children}</div>
     </div>
   );
 }

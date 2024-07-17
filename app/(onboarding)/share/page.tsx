@@ -27,7 +27,7 @@ const Share = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <main className="min-h-screen w-full flex">
+    <main className="min-h-screen w-full flex md:bg-[url('/images/onboarding/people.jpg')]">
       <div className="bg-background md:w-[465px] w-full  p-4 flex flex-col space-y-4">
         <div className="flex items-center p-4 px-1 space-x-2">
           <Image alt="logo" src={"/images/logo.png"} height={40} width={40} />

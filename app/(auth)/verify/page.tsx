@@ -53,6 +53,7 @@ function Verify() {
                           {...field}
                           value={field.value}
                           onChange={field.onChange}
+                          className="rounded h-12 w-4 "
                         />
                       </FormItem>
                       <FormMessage />

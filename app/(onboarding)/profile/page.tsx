@@ -38,19 +38,19 @@ export default function Profile() {
   };
 
   return (
-    <div className="w-4/5 lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px]">
-      <div className="flex items-center justify-center bg-background overflow-hidden">
+    <div className="w-4/5 lg:grid md::min-h-[600px] min-h-[890px] lg:grid-cols-2 xl:min-h-[800px]">
+      <div className="flex items-center justify-center bg-background overflow-hidden h-[100vh]">
         <div className="mx-auto grid w-[350px] gap-6">
           <div className="absolute top-3 left-5 m-4 flex items-center">
             <img src={logo.src} alt="Company Logo" className="h-8 w-8 mr-2" />
-            <h2 className="text-3xl ">CapCons.</h2>
+            <h2 className="text-3xl font-bold">CapCons.</h2>
           </div>
           <div className="grid gap-2 text-center">
             <h1 className="text-2xl text-foreground font-bold">Upload your profile picture</h1>
             <div className="flex justify-center w-full max-w-sm items-center gap-1.5 mt-12">
               <label
                 htmlFor="picture"
-                className="relative w-32 h-32 rounded-full flex items-center justify-center cursor-pointer overflow-hidden"
+                className="relative w-32 h-32 rounded-full flex items-center justify-center cursor-pointer overflow-hidden "
               >
                 <div
                   className="absolute inset-0 rounded-full border-2 border-transparent"

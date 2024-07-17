@@ -70,7 +70,7 @@ function Login() {
               {showCountryCodeInput && (
                 <select
                   id="countryCode"
-                  className="shadow appearance-none py-2 px-3 leading-tight bg-transparent focus:outline-none focus:shadow-outline border text-slight-grey border-custom-Border"
+                  className="shadow appearance-none py-2 px-3 leading-tight bg-transparent focus:outline-none focus:shadow-outline border rounded text-slight-grey border-custom-Border"
                   value={countryCode}
                   onChange={handleCountryCodeChange}
                 >
@@ -131,7 +131,7 @@ function Login() {
           </form>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <Link href="/signup" className="underline text-[#D6A7FF]">
+            <Link href="/signup" className="hover:underline text-[#D6A7FF]">
               Sign up here
             </Link>
           </div>
