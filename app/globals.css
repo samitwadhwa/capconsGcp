@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-border {
+  position: relative;
+  padding: 2px; /* Adjust the thickness of the gradient border */
+  border-radius: 50%;
+  background: linear-gradient(to right, #2A7FF5 70%, #19C0B6 100%, #B76FF7 100%);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white; /* Adjust to match the background color of your container */
+  border-radius: 50%;
+  margin: 2px; /* Adjust to match the padding */
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 96.1%;
+    --card-foreground: 0 0% 33.3%;
+    --popover: 0 0% 96.1%;
+    --popover-foreground: 0 0% 33.3%;
+    --primary: 260.3 44% 64.3%;
+    --primary-foreground: 0 0% 33.3%;
+    --secondary: 260.3 44% 64.3%;
+    --secondary-foreground: 0 0% 95.7%;
+    --muted: 0 0% 92.5%;
+    --muted-foreground: 0 0% 60.8%;
+    --accent: 271 63.3% 38.4%;
+    --accent-foreground: 0 0% 95.7%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 0 0% 78%;
+    --input: 0 0% 78%;
+    --ring: 260.3 44% 64.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 12.5% 9.4%;
+    --foreground: 0 0% 95.7%;
+    --card: 240 4.5% 17.3%;
+    --card-foreground: 210 20% 98%;
+    --popover: 240 4.5% 17.3%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 271 63.3% 38.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 271.6 29.5% 37.8%;
+    --secondary-foreground: 0 0% 95.7%;
+    --muted: 240 4.6% 21.4%;
+    --muted-foreground: 0 0% 62.7%;
+    --accent: 260.3 44% 64.3%;
+    --accent-foreground: 0 0% 95.7%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 240 2.6% 22.9%;
+    --input: 271.6 29.5% 37.8%;
+    --ring: 271 63.3% 38.4%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fr-view.fr-element {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground)) !important;
+  border: none !important;
+}
+
+.fr-box.gray-theme.fr-basic.fr-top {
+  border: none !important;
+}
+#fr-logo {
+  display: none;
+}
+
+.fr-toolbar.fr-desktop.fr-top.fr-basic.fr-sticky-off {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--muted)) !important;
+}
+
+.dark-theme .fr-second-toolbar {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--muted)) !important;
+}
+
+.fr-second-toolbar {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--muted)) !important;
+}
+
+.dark-theme.fr-box.fr-basic .fr-wrapper {
+  border: none !important;
+  border-bottom: 1px solid hsl(var(--muted)) !important;
+}
+
+.fr-box.fr-basic .fr-wrapper {
+  border: none !important;
+  border-bottom: 1px solid hsl(var(--muted)) !important;
+}
