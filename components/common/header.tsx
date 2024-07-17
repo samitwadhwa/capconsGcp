@@ -19,14 +19,17 @@ const Header = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Capcons.</span>
+            <div className="flex items-center gap-2">
             <img
               className="h-8 w-auto"
               height={32}
               width={"50"}
-              src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/CapconsLogo.webp"
+              src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/LogoNew.webp"
               alt=""
             />
+            <h2 className="text-3xl text-foreground font-bold">Capcons.</h2>
+            </div>
           </a>
         </div>
         <div className="lg:flex space-x-12 hidden ">

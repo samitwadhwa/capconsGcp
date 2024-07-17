@@ -148,6 +148,7 @@ const BlogsDetailedCard: React.FC<BlogsDetailedCardProps> = ({title , blogsDetai
     {blogsDetailed.slice(0,visibleCards).map((item, index) => {
       return (
         <BlogsCard 
+          key={item.id}
           title={item.title}
           likes={item.likes}
           imageUrl={item.imageUrl}

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { OtpStyledInput } from "@/components/ui/input-otp";
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -12,21 +12,18 @@ interface FormValues {
 }
 
 function ChangePass() {
-
   const {
     handleSubmit,
-    control,
     register,
     watch,
     trigger,
-    formState: { errors  , isSubmitted},
+    formState: { errors, isSubmitted },
     setValue,
   } = useForm<FormValues>({
     mode: "onChange",
   });
   const emailValue = watch("email");
   const router = useRouter();
-
 
   const [showCountryCodeInput, setShowCountryCodeInput] = useState(false);
   const [countryCode, setCountryCode] = useState("+91");
@@ -37,40 +34,36 @@ function ChangePass() {
     if (!isNumeric) {
       setCountryCode("");
     }
-  
     if (isSubmitted) {
       trigger("email");
     }
   }, [emailValue, trigger, isSubmitted]);
-
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     if (showCountryCodeInput) {
       data.email = countryCode + data.email;
     }
     console.log(data);
-    if(data.otp && data.email){
+    if (data.otp && data.email) {
       router.push("/login");
     }
-
   };
 
   const handleSendOTP = () => {
-    if(!emailValue){
+    if (!emailValue) {
       trigger("email");
     }
-  }
+  };
 
- // Adjust handleOtpChange to accept string directly
- const handleOtpChange = (otp: string) => {
-  setValue("otp", otp, { shouldValidate: true });
-};
+  const handleOtpChange = (otp: string) => {
+    setValue("otp", otp, { shouldValidate: true });
+  };
+
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setValue("email", value, { shouldValidate: true });
   };
 
- 
   const handleCountryCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCountryCode(e.target.value);
   };
@@ -87,13 +80,13 @@ function ChangePass() {
               </p>
             </div>
           </div>
-         
+
           <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
             <div className="flex items-center gap-2">
-            {showCountryCodeInput && (
+              {showCountryCodeInput && (
                 <select
                   id="countryCode"
-                  className="shadow appearance-none py-2 px-3 leading-tight bg-transparent focus:outline-none focus:shadow-outline border text-slight-grey border-custom-Border"
+                  className="shadow appearance-none py-2 px-3 rounded leading-tight bg-transparent focus:outline-none focus:shadow-outline border text-slight-grey border-custom-Border"
                   value={countryCode}
                   onChange={handleCountryCodeChange}
                 >
@@ -117,33 +110,32 @@ function ChangePass() {
                 onChange={handleEmailChange}
               />
             </div>
-              {errors.email && (
+            {errors.email && (
               <span className="text-red-500 text-sm">{errors.email.message}</span>
             )}
-              <Button
+            <Button
               type="button"
-              className="w-full mt-4 border border-[#D6A7FF]  !rounded bg-[#2F2D2D hover:bg-[#D6A7FF]"
+              className="w-full mt-4 border border-[#D6A7FF] !rounded bg-[#2F2D2D hover:bg-[#D6A7FF]"
               onClick={handleSendOTP}
             >
               Send OTP
             </Button>
-         
-          <div className="grid gap-2 text-left mt-4">
-            <p className="text-balance text-foreground">
-              Enter your 6 digit code sent to ********82
-            </p>
-          </div>
-           {/* please fix the text of this otp also */}
-                  <OtpStyledInput
-                   {...register("otp", {
-                     required: "OTP is required!",
-                   })}
-                   inputType="number"
-                   numInputs={6}
-                   className="p-0"
-                   onChange={handleOtpChange}
-                  />
-            
+
+            <div className="grid gap-2 text-left mt-4">
+              <p className="text-balance text-foreground">
+                Enter your 6 digit code sent to ********82
+              </p>
+            </div>
+            <OtpStyledInput
+              {...register("otp", {
+                required: "OTP is required!",
+              })}
+              inputType="number"
+              numInputs={6}
+              className="rounded h-12 w-4 text-foreground"
+              onChange={handleOtpChange}
+            />
+
             {errors.otp && (
               <span className="text-red-500 text-sm">{errors.otp.message}</span>
             )}
@@ -158,7 +150,7 @@ function ChangePass() {
             <Button type="submit" className="mt-3 font-bold">
               Verify
             </Button>
-          </form>       
+          </form>
 
           <div className="flex items-center mt-5">
             <div className="flex-grow border-t border-[#A0A0A0]"></div>

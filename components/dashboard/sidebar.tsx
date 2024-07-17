@@ -32,22 +32,21 @@ export function Sidebar() {
           variant="link"
           asChild
         >
-          <div className="flex lg:flex-1 max-h-12">
-            <Link href={"/"} className="-m-3 p-1.5">
+          <div className="flex lg:flex-1 max-h-12 ">
+            <Link href={"/"} className="-m-3 ">
               {toggleObj.isOpen ? (
-                <Image
-                  className=" w-auto"
-                  height={10}
-                  width={"20"}
-                  src={"/logo.svg"}
-                  alt=""
-                />
+                <div className="flex items-center gap-2"><Image
+                  className="w-auto"
+                  height={15}
+                  width={"30"}
+                  src={"https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/LogoNew.webp"}
+                  alt="" /><h2 className="font-bold text-3xl text-foreground">Capcons.</h2></div>
               ) : (
                 <Image
-                  className=" w-auto"
+                  className="w-auto"
                   height={10}
                   width={"20"}
-                  src={"/logosmall.svg"}
+                  src={"https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/LogoNew.webp"}
                   alt=""
                 />
               )}

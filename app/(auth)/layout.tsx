@@ -17,8 +17,8 @@ export default function AuthLayout({
   return (
 <div className='flex min-h-screen bg-background text-foreground'>
   <div className="absolute top-3 left-5 m-4 flex items-center">
-    <img src={logo.src} alt="Company Logo" className="h-8 w-8 mr-2" />
-    <h2 className="text-3xl ">CapCons.</h2>
+    <img src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/LogoNew.webp" alt="Company Logo" className="h-8 w-8 mr-2" />
+    <h2 className="text-3xl font-bold">CapCons.</h2>
   </div>
   <div className='flex flex-col justify-center px-2 w-25rem  bg-background'>
     {children}

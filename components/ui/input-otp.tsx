@@ -77,7 +77,7 @@ export const OtpStyledInput = ({
           className={cn("!w-10 !appearance-none selection:bg-none", className)}
         />
       )}
-      containerStyle={`flex  items-center flex-wrap  text-2xl font-bold ${
+      containerStyle={`flex  items-center flex-wrap  text-3xl font-bold ${
         props.renderSeparator ? "gap-1" : "gap-x-4 gap-y-2"
       }`}
     />

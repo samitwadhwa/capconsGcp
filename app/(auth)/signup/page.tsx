@@ -169,9 +169,9 @@ function Signup() {
                 onClick={handleTogglePasswordVisibility}
               >
                 {showPassword ? (
-                  <FaEye className="h-4 w-4 text-gray-400" />
+                  <FaEye className="h-4 w-4 text-gray" />
                 ) : (
-                  <FaRegEyeSlash className="h-4 w-4 text-gray-400" />
+                  <FaRegEyeSlash className="h-4 w-4 text-gray" />
                 )}
               </button>
             </div>
@@ -187,7 +187,7 @@ function Signup() {
           </form>
           <div className="text-sm">
             Already have an account?{" "}
-            <Link href="/login" className="underline text-[#D6A7FF]">
+            <Link href="/login" className="hover:underline text-[#D6A7FF]">
               Login here
             </Link>
           </div>
@@ -198,11 +198,11 @@ function Signup() {
             <div className='flex-grow border-t border-[#A0A0A0]'></div>
           </div>
           <div className="flex justify-center space-x-6 mt-2">
-            <Button variant="ghost" size="icon" className="flex items-center rounded hover:bg-transparent w-14 h-10">
-              <img src={googleIcon.src} alt="" className="w-14 h-14"/>
+            <Button variant="ghost" size="icon" className="flex items-center rounded hover:bg-transparent w-10 h-10">
+              <img src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/GoogleIcon.webp" alt="" className="w-10 h-10"/>
             </Button>
             <Button size="icon" className="flex items-center rounded-full w-10 h-10">
-              <img src={appleIcon.src} alt=""  className="w-10 h-10 rounded-full"/>
+              <img src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/AppleLogo.webp" alt=""  className="w-10 h-10 rounded-full"/>
             </Button>
           </div>
           <div className='flex justify-center items-center mt-4'>
