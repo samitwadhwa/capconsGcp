@@ -130,7 +130,7 @@ const ProfileComponent: React.FC = () => {
   const closeModal = () => setIsModalOpen(false);
   
   return (
-    <div className="max-w-[50rem] dark:bg-[#212129] flex flex-col justify-between  bg-card p-8 rounded-lg shadow-md relative">
+    <div className="max-w-[100rem] dark:bg-[#212129] flex flex-col justify-between  bg-card p-8 rounded-lg shadow-md relative">
       <div className="absolute top-4 right-4">
         <button className="text-foreground hover:text-gray-400">
           <FaPen size={16} />
@@ -178,9 +178,9 @@ const ProfileComponent: React.FC = () => {
 
 const RemindersComponent: React.FC = () => {
   return (
-    <div className="w-full max-w-[50rem] bg-background rounded-lg shadow-md">
+    <div className="w-full max-w-[35rem] bg-background rounded-lg shadow-md">
       <div className="flex gap-4 justify-around items-center mb-6 md:mt-0 mt-4">
-        <div className="text-foreground dark:bg-[#212129] bg-card flex flex-row justify-start items-center max-w-[16rem] w-[16rem] h-24 p-4 gap-8 rounded-lg">
+        <div className="text-foreground dark:bg-[#212129] bg-card flex flex-row justify-start items-center max-w-[30rem] w-[25rem] h-24 p-4 gap-8 rounded-lg">
          <div>
           <img src="https://storage.googleapis.com/capcons-analytics/Capcons-dev-images/goldCoin.webp" className='md:h-20 md:w-20 w-10 h-10' alt="" />
          </div>
@@ -189,7 +189,7 @@ const RemindersComponent: React.FC = () => {
           <p className="md:text-4xl text-[#D6A7FF] text-xs">000 <span className="text-xl text-foreground font-bold">xp</span></p>
           </div>
         </div>
-        <div className="text-foreground flex flex-col justify-center dark:bg-[#212129]  bg-card max-w-[18rem] w-[18rem] h-24 p-8 rounded-lg ">
+        <div className="text-foreground flex flex-col justify-center dark:bg-[#212129]  bg-card max-w-[30rem] w-[22rem] h-24 p-8 rounded-lg ">
           <h3 className="md:text-lg text-xs">Your Circle</h3>
           <div className="flex items-center mt-2">
             <div className="relative w-8 h-8 rounded-full overflow-hidden bg-foreground gradient-border">
